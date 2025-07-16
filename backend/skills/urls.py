@@ -1,5 +1,8 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+from .views import SkillViewSet
 
-urlpatterns = [
-    
-]
+router = DefaultRouter()
+router.register(r'', SkillViewSet, basename='skill')
+
+urlpatterns = router.urls
